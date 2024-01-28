@@ -1,0 +1,42 @@
+.ct-button {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #2783F3;
+    border: 1px solid #2783F3;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 4px;
+    span {
+        transition: 0.3s;
+        color: #fff;
+        font-size: 15px;
+        z-index: 1;
+        position: relative;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        left: -110%;
+        top: 0;
+        width: 110%;
+        height: 100%;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        span {
+            color: #2783F3;
+            transition: 0.3s;
+        }
+        &::after {
+            left: 0%;
+            transition: 0.3s;
+        }
+    }
+}

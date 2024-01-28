@@ -1,0 +1,133 @@
+.ct-banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    padding: 0 0 16px 0;
+    
+    &__outer {
+        margin: 0 -16px;
+        display: flex;
+        align-items: center;
+        padding-top: 130px;
+    }
+
+    &__left {
+        width: calc(50% - 32px);
+        margin: 0 16px;
+
+        h2 {
+            color: #FFF;
+            font-size: 40px;
+            font-weight: 600;
+            padding-bottom: 32px;
+        }
+
+        p {
+            color: #ffffffb3;
+            font-size: 18px;
+            font-weight: 400;
+            width: 70%;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__cta {
+        width: 27%;
+        
+    }
+
+    &__right {
+        width: calc(50% - 32px);
+        margin: 0 16px;
+    }
+
+    .slick-prev:before,.slick-next:before{
+        display: none;
+    }
+
+    .slick-dots li.slick-active button:before {
+        background-color: #fff;
+        border-radius: 50%;
+        content: "" !important;
+        width: 12px;
+        height: 12px;
+    }
+
+    .slick-dots li button:before {
+        border-radius: 50%;
+        content: "" !important;
+        background-color: #ffffff66;
+        opacity: 1;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .slick-dots li {
+        margin: 0 2px;
+    }
+}
+
+@include tablet-pro {
+    .ct-banner {
+        &__cta {
+            width: 30%;
+        }
+    }
+}
+
+@include tablet {
+    .ct-banner {
+        height: 800px;
+        &__left {
+            h2 {
+                font-size: 32px;
+            }
+            p {
+                width: 100%;
+            }
+        }
+
+        &__cta {
+            width: 55%;
+        }
+    }
+}
+
+
+@include mobile {
+    .ct-banner {
+        &__outer {
+            flex-direction: column;
+            padding-top: 100px;
+        }
+        &__left {
+            width: calc(100% - 32px);
+            h2 {
+                font-size: 24px;
+                padding-bottom: 16px;
+                text-align: center;
+            }
+            p {
+                width: 100%;
+                padding-bottom: 16px;
+                text-align: center;
+            }
+        }
+
+        &__right {
+            width: calc(100% - 32px);
+            padding-top: 32px;
+        }
+
+        &__cta {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .ct-button  {
+                width: 45%;
+            }
+        }
+    }
+}
